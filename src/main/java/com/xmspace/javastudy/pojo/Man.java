@@ -3,6 +3,10 @@ package com.xmspace.javastudy.pojo;
 import lombok.Builder;
 import lombok.Data;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
 /**
  * There is plenty of fish in the sea
  *
@@ -12,7 +16,19 @@ import lombok.Data;
 @Data
 @Builder
 public class Man {
-    private String name;
-    private int age;
-    private String[] Hobbies;
+    /**
+     * 姓名
+     */
+    @Builder.Default
+    private String name = "小明";
+    /**
+     * 年龄
+     */
+    @Builder.Default
+    private int age = 18;
+    /**
+     * 爱好
+     */
+    @Builder.Default
+    private List<Hobby> hobbies = Collections.emptyList();
 }
