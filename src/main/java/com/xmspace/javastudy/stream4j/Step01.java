@@ -11,7 +11,7 @@ import java.util.List;
  * There is plenty of fish in the sea
  *
  * @Author XM  2023/05/06
- * Description: lambda
+ * Description: lambda 函数式接口实现数组合并
  **/
 public class Step01 {
 

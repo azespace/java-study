@@ -21,7 +21,7 @@ public class Hobby {
      * 建议游玩时间
      */
     @Builder.Default
-    private int hours = 4;
+    private Integer hours = 4;
     /**
      * 如何进行，多人 1 单人 0
      */
