@@ -15,7 +15,7 @@ import java.util.List;
  **/
 @Data
 @Builder
-public class Man {
+public class Man implements Comparable<Man>{
     /**
      * 姓名
      */
@@ -31,4 +31,9 @@ public class Man {
      */
     @Builder.Default
     private List<Hobby> hobbies = Collections.emptyList();
+
+    @Override
+    public int compareTo(Man o) {
+        return this.getAge()-o.getAge();
+    }
 }
