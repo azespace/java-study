@@ -9,6 +9,12 @@ public class Clazz {
     //1.可以定义类变量给默认值或者不给
     public static int a = 3;
     public static int l = 3;
+    public Clazz() {
+    }
+    public Clazz(int c) {
+        this.c = c;
+    }
+
     static int b;
     //2.可以定义实例变量给默认值或者不给
     int c = 1;
