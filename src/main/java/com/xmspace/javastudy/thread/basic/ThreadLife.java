@@ -1,14 +1,14 @@
-package com.xmspace.javastudy.thread.item001;
+package com.xmspace.javastudy.thread.basic;
 
 import java.util.concurrent.TimeUnit;
 
 /**
- * @ClassName juc002
+ * @ClassName
  * @Description 线程的生命周期
  * @Author XM
  * @Date 2022/09/22 17:48
  **/
-public class Juc002 {
+public class ThreadLife {
     public static void main(String[] args) throws InterruptedException {
         //NEW -> RUNNABLE (Ready,Running) ->TERMINATED
         //线程的生命周期通过getState()方法查看   要注意这里输出为  NEW
@@ -29,17 +29,14 @@ public class Juc002 {
 
         //wait方法让正在运行中的线程处于waiting等待状态,所以在run方法中执行,其他的则线程调用notify或者notifyAll唤醒,需要注意的是这2个方法需要配合synchronized锁，否则无法使用(直接报错)
         Object obj = new Object();
-        Thread thread02 = new Thread(new Runnable() {
-            @Override
-            public void run() {
-                synchronized (obj){
-                    try {
-                        //此线程直接释放obj锁，同时进入waiting等待阻塞状态,注意：等待状态的特征是等待其他线程做某事(notify等),Obj的wait(),Thread的join(),LockSupport的park()方法会进入waiting等待阻塞状态
-                        obj.wait();
-                        System.out.println("thread02:isRunning~~");
-                    } catch (InterruptedException e) {
-                        throw new RuntimeException(e);
-                    }
+        Thread thread02 = new Thread(() -> {
+            synchronized (obj){
+                try {
+                    //此线程直接释放obj锁，同时进入waiting等待阻塞状态,注意：等待状态的特征是等待其他线程做某事(notify等),Obj的wait(),Thread的join(),LockSupport的park()方法会进入waiting等待阻塞状态
+                    obj.wait();
+                    System.out.println("thread02:isRunning~~");
+                } catch (InterruptedException e) {
+                    throw new RuntimeException(e);
                 }
             }
         });

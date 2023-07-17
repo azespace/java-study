@@ -1,12 +1,12 @@
-package com.xmspace.javastudy.thread.item001;
+package com.xmspace.javastudy.thread.examples.twothreadalternateprint;
 
 /**
- * @ClassName juc003
+ * @ClassName Case03
  * @Description 线程交替打印
  * @Author XM
  * @Date 2022/09/23 16:42
  **/
-public class Juc004 {
+public class Case03 {
     //这里第一个线程启动执行printA的时候获取了同步锁,第二个线程执行了printB就会等待,此时printA调用wait释放锁并陷入了等待唤醒,然后printB获取到同步锁进入修改flag并打印输出后唤醒A后获取锁
     //后wait释放锁并等待notify
     boolean flag = false;
@@ -35,15 +35,15 @@ public class Juc004 {
         notify();
     }
     public static void main(String[] args) {
-        Juc004 juc004 = new Juc004();
+        Case03 case03 = new Case03();
         new Thread(() -> {
             for (int i = 0; i < 10; i++) {
-                juc004.printA();
+                case03.printA();
             }
         }, "thread01").start();//thread01表示给线程命名方便控制台输出查看
         new Thread(()->{
             for (int i = 0; i < 10; i++) {
-                juc004.printB();
+                case03.printB();
             }
         },"thread02").start();
     }
