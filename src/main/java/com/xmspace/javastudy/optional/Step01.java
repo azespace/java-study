@@ -1,7 +1,7 @@
 package com.xmspace.javastudy.optional;
 
-import com.xmspace.javastudy.pojo.Hobby;
-import com.xmspace.javastudy.pojo.Man;
+import com.xmspace.javastudy.optional.pojo.Hobby;
+import com.xmspace.javastudy.optional.pojo.Man;
 
 import java.util.List;
 import java.util.Optional;

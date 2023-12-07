@@ -1,6 +1,6 @@
 package com.xmspace.javastudy.basic;
 
-import com.xmspace.javastudy.pojo.Man;
+import com.xmspace.javastudy.optional.pojo.Man;
 
 import java.util.Arrays;
 import java.util.Comparator;

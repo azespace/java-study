@@ -1,6 +1,6 @@
-package com.xmspace.javastudy.functional;
+package com.xmspace.javastudy.stream4j.functional;
 
-import com.xmspace.javastudy.pojo.Hobby;
+import com.xmspace.javastudy.optional.pojo.Hobby;
 
 import java.util.List;
 

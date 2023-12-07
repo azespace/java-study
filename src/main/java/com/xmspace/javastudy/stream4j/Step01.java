@@ -1,8 +1,8 @@
 package com.xmspace.javastudy.stream4j;
 
-import com.xmspace.javastudy.functional.HobbiesFuc;
-import com.xmspace.javastudy.pojo.Hobby;
-import com.xmspace.javastudy.pojo.Man;
+import com.xmspace.javastudy.stream4j.functional.HobbiesFuc;
+import com.xmspace.javastudy.optional.pojo.Hobby;
+import com.xmspace.javastudy.optional.pojo.Man;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,4 +1,4 @@
-package com.xmspace.javastudy.pojo;
+package com.xmspace.javastudy.optional.pojo;
 
 import lombok.Builder;
 import lombok.Data;

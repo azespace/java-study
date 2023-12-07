@@ -1,9 +1,8 @@
-package com.xmspace.javastudy.pojo;
+package com.xmspace.javastudy.optional.pojo;
 
 import lombok.Builder;
 import lombok.Data;
 
-import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
