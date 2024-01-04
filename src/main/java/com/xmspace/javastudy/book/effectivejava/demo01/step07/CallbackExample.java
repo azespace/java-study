@@ -17,7 +17,7 @@ public class CallbackExample {
     public static void main(String[] args) {
         CallbackExample example = new CallbackExample();
         // 注册回调
-        Callback callback = new Callback() {
+        Callback callback = new Callback() { // 不要使用lambda表达式会造成生命周期延长导致无法回收
             @Override
             public void onCallback() {
                 System.out.println("Callback executed");
